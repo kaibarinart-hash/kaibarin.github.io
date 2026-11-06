@@ -36,69 +36,114 @@
         </section>
 
 <section class="gumball-section">
+
     <div class="section-heading">
         <p class="eyebrow">a little surprise for you</p>
         <h2>Art Gumball Machine!</h2>
         <p>Take a chance and see what comes out ♡</p>
     </div>
 
-    <div class="gumball-machine" id="gumball-machine">
+    <div class="gumball-layout">
 
+        <!-- LEFT SIDE: GUMBALL MACHINE -->
 
-        <div class="machine-dome">
-            <div class="gumball-balls" id="gumball-balls">
-                <p class="gumball-loading">Loading little treasures...</p>
+        <div class="gumball-machine-column">
+
+            <div class="gumball-machine" id="gumball-machine">
+
+                <div class="machine-dome">
+
+                    <div class="gumball-balls" id="gumball-balls">
+                        <p class="gumball-loading">
+                            Loading little treasures...
+                        </p>
+                    </div>
+
+                    <div class="dome-shine"></div>
+
+                </div>
+
+                <div class="machine-neck"></div>
+
+                <div class="machine-base">
+
+                    <p class="machine-instruction">INSERT TOKEN</p>
+
+                    <button
+                        class="gumball-knob"
+                        id="gumball-knob"
+                        type="button"
+                        aria-label="Dispense a random artwork"
+                    >
+                        <span>✦</span>
+                    </button>
+
+                    <p class="machine-brand">KAIBARIN ©</p>
+
+                </div>
+
+                <div class="gumball-dispenser">
+
+                    <div class="dispenser-opening"></div>
+
+                    <button
+                        class="dispensed-gumball"
+                        id="dispensed-gumball"
+                        type="button"
+                        hidden
+                        aria-label="View your dispensed artwork"
+                    >
+                        <img id="dispensed-image" src="" alt="">
+                    </button>
+
+                </div>
+
             </div>
-            <div class="dome-shine"></div>
-        </div>
 
-        <div class="machine-neck"></div>
-
-        <div class="machine-base">
-            <p class="machine-instruction">INSERT TOKEN</p>
+            <p class="gumball-caption" id="gumball-caption">
+                Turn the knob and get a surprise!
+            </p>
 
             <button
-                class="gumball-knob"
-                id="gumball-knob"
-                type="button"
-                aria-label="Dispense a random artwork"
-            >
-                <span>✦</span>
-            </button>
-
-            <p class="machine-brand">KAIBARIN ©</p>
-        </div>
-
-        <div class="gumball-dispenser">
-            <div class="dispenser-opening"></div>
-
-            <button
-                class="dispensed-gumball"
-                id="dispensed-gumball"
+                class="button gumball-again"
+                id="gumball-again"
                 type="button"
                 hidden
-                aria-label="View your dispensed artwork"
             >
-                <img id="dispensed-image" src="" alt="">
+                Try Again ♡
             </button>
+
         </div>
+
+        <!-- RIGHT SIDE: ARTIST INTRODUCTION -->
+
+        <aside class="gumball-intro">
+
+            <p class="eyebrow">Meet the Artist</p>
+
+            <h2>Hey, I'm Kay!</h2>
+
+            <p>
+                I'm a Korean-American UX design sophomore based
+                in the United States. On this platform, I specialize
+                in digital illustration and character artwork.
+                I'd love to help bring your ideas to life!
+            </p>
+
+            <a class="button button-light" href="request.html">
+                Commission me
+            </a>
+
+        </aside>
+
     </div>
 
-    <p class="gumball-caption" id="gumball-caption">
-        Turn the knob and get a surprise!
-    </p>
-
-    <button
-        class="button gumball-again"
-        id="gumball-again"
-        type="button"
-        hidden
-    >
-        Try Again ♡
-    </button>
 </section>
 
+<!-- GACHA ARTWORK POPUP -->
+
 <dialog class="gumball-modal" id="gumball-modal">
+
     <button
         class="modal-close"
         id="gumball-modal-close"
@@ -116,17 +161,8 @@
         <p id="modal-artwork-description"></p>
     </div>
 
-        <section class="about">
-            <p class="eyebrow">Meet the Artist</p>
-            <h2>Hi, I'm Kay!</h2>
-            <p>
-               I'm a Korean-American UX design sophomore based in the United States. On this platform, I specialize in digital illustration and character artwork. I'd love to help.
-            </p>
-            <a class="button button-light" href="request.html">
-                Commission me
-            </a>
-        </section>
-    </main>
+</dialog>
+
 
     <footer>
         <p>Thanks for visiting!</p>
