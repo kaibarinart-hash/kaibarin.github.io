@@ -108,6 +108,36 @@ const gachaArtworks = [
         image: "images/Towa.png",
         description: "Towa"
     }
+{
+        title: "Alfonse",
+        image: "images/Alfonse.png",
+        description: "Alfonse"
+    }
+{
+        title: "Gabi",
+        image: "images/Gabi.png",
+        description: "Gabi"
+    }
+{
+        title: "John",
+        image: "images/John.png",
+        description: "John"
+    }
+{
+        title: "Lyndra",
+        image: "images/Lyndra.png",
+        description: "Lyndra"
+    }
+{
+        title: "M310",
+        image: "images/M310.png",
+        description: "M310"
+    }
+{
+        title: "Patina",
+        image: "images/Patina.png",
+        description: "Patina"
+    }
    
 ];
 
