@@ -338,11 +338,6 @@ async function loadGumballMachine() {
 document.addEventListener("DOMContentLoaded", loadGumballMachine);
 
 const gachaArtworks = [
-    {
-        title: "L30",
-        image: "images/L30.png",
-        description: "L30"
-    },
   {
         title: "Reese",
         image: "images/Reese.png",
@@ -353,4 +348,4 @@ const gachaArtworks = [
         image: "images/Marquis.png",
         description: "Marquis"
     },
-      
+]
