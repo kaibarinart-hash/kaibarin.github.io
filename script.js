@@ -108,7 +108,11 @@ const gachaArtworks = [
         image: "images/l30.png",
         description: "L30 by @alextatakai"
     }
-
+  {
+        title: "Towa",
+        image: "images/Towa.png",
+        description: "Towa"
+    }
    
 ];
 
