@@ -3215,6 +3215,14 @@ footer::after {
     width: 100%;
     height: 100%;
     border-radius: 50%;
+    object-fit: cover; 
+}
+
+.gumball-ball img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
     object-fit: cover;
 }
 
