@@ -339,18 +339,9 @@ document.addEventListener("DOMContentLoaded", loadGumballMachine);
 
 const gachaArtworks = [
     {
-        title: "Artwork One",
-        image: "images/gacha/art-01.jpg",
-        description: "A little character illustration."
+        title: "L30",
+        image: "images/gacha/L30.png",
+        description: "L30"
     },
     {
-        title: "Artwork Two",
-        image: "images/gacha/art-02.jpg",
-        description: "Another favorite creation."
-    },
-    {
-        title: "Artwork Three",
-        image: "images/gacha/art-03.jpg",
-        description: "A commission illustration."
-    }
-];
+      
