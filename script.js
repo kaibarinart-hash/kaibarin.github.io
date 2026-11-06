@@ -91,13 +91,25 @@ const gachaArtworks = [
     {
         title: "Reese",
         image: "images/Reese.png",
-        description: "Reese"
+        description: "Reese (by @erospistol)"
     },
     {
         title: "Marquis",
         image: "images/Marquis.png",
         description: "Marquis"
     }
+    {
+        title: "Nanna",
+        image: "images/Nanna.png",
+        description: "Nanna"
+    }
+ {
+        title: "L30",
+        image: "images/l30.png",
+        description: "L30 by @alextatakai"
+    }
+
+   
 ];
 
 function loadGumballMachine() {
