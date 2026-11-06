@@ -98,16 +98,6 @@ const gachaArtworks = [
         image: "images/Marquis.png",
         description: "Marquis"
     }
-    {
-        title: "Nanna",
-        image: "images/Nanna.png",
-        description: "Nanna"
-    }
-  {
-        title: "Towa",
-        image: "images/Towa.png",
-        description: "Towa"
-    }
    
 ];
 
