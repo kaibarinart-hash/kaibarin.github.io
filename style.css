@@ -3142,3 +3142,373 @@ footer::after {
         height: 200px;
     }
 }
+
+/* ==========================================
+   KAIBARIN — ART GUMBALL MACHINE
+========================================== */
+
+.gumball-section {
+    position: relative;
+    padding: 80px 6%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.gumball-machine {
+    width: min(100%, 340px);
+    margin: 30px auto 0;
+    position: relative;
+    filter: drop-shadow(8px 8px 0 var(--ink));
+}
+
+/* MACHINE LABEL */
+
+.machine-label {
+    position: relative;
+    z-index: 2;
+    width: 75%;
+    margin: 0 auto -5px;
+    padding: 10px;
+    border: 3px solid var(--ink);
+    background: linear-gradient(135deg, var(--chrome), var(--silver));
+    font-family: var(--font-tech);
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.machine-label span {
+    font-size: .55rem;
+    letter-spacing: 2px;
+}
+
+.machine-label strong {
+    font-family: var(--font-chaos);
+    font-size: 1.3rem;
+    color: var(--pink-dark);
+}
+
+/* TRANSPARENT DOME */
+
+.machine-dome {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border: 4px solid var(--ink);
+    border-radius: 50% 50% 12% 12%;
+    background:
+        radial-gradient(
+            circle at 35% 20%,
+            rgba(255,255,255,.85),
+            rgba(255,255,255,.15) 35%,
+            rgba(255,66,161,.12) 75%
+        );
+    box-shadow:
+        inset 0 0 20px rgba(255,255,255,.9),
+        inset 0 -10px 25px rgba(201,33,114,.15);
+}
+
+.gumball-balls {
+    position: absolute;
+    inset: 8% 5% 4%;
+    overflow: hidden;
+}
+
+.gumball-loading {
+    font-family: var(--font-diary);
+    font-size: 1.1rem;
+    position: absolute;
+    inset: 40% 0 auto;
+}
+
+/* FLOATING ART GUMBALLS */
+
+.gumball-ball {
+    position: absolute;
+    width: clamp(35px, 12%, 52px);
+    aspect-ratio: 1;
+    padding: 3px;
+    border: 2px solid var(--ink);
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--pink);
+    box-shadow: 2px 3px 0 var(--ink);
+    animation: gumball-float 3s ease-in-out infinite alternate;
+}
+
+.gumball-ball img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.gumball-ball:nth-child(3n) {
+    background: var(--purple);
+}
+
+.gumball-ball:nth-child(3n + 1) {
+    background: var(--blue);
+}
+
+.gumball-ball:nth-child(3n + 2) {
+    background: var(--yellow);
+}
+
+@keyframes gumball-float {
+    from {
+        transform: translateY(-5px) rotate(-8deg);
+    }
+    to {
+        transform: translateY(7px) rotate(8deg);
+    }
+}
+
+/* GLASS REFLECTION */
+
+.dome-shine {
+    position: absolute;
+    top: 9%;
+    left: 13%;
+    width: 12%;
+    height: 43%;
+    border-radius: 50%;
+    background: rgba(255,255,255,.45);
+    transform: rotate(25deg);
+    pointer-events: none;
+}
+
+.machine-neck {
+    width: 68%;
+    height: 18px;
+    margin: -2px auto 0;
+    border: 3px solid var(--ink);
+    background: linear-gradient(
+        90deg,
+        var(--silver-dark),
+        white,
+        var(--silver),
+        white,
+        var(--silver-dark)
+    );
+}
+
+/* PINK CHROME BASE */
+
+.machine-base {
+    position: relative;
+    padding: 18px 12px 12px;
+    border: 4px solid var(--ink);
+    border-radius: 12px 12px 25px 25px;
+    background: linear-gradient(
+        135deg,
+        var(--pink),
+        var(--bubblegum),
+        var(--pink-dark)
+    );
+    box-shadow: inset 0 4px 0 rgba(255,255,255,.6);
+}
+
+.machine-instruction {
+    margin: 0 0 12px;
+    font-family: var(--font-tech);
+    font-size: .65rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.gumball-knob {
+    width: 65px;
+    height: 65px;
+    border: 4px solid var(--ink);
+    border-radius: 50%;
+    background: linear-gradient(135deg, white, var(--silver), var(--pink));
+    box-shadow: 4px 4px 0 var(--ink);
+    color: var(--pink-dark);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform .2s, box-shadow .2s;
+}
+
+.gumball-knob:hover {
+    transform: rotate(20deg);
+}
+
+.gumball-knob:active {
+    transform: translate(3px, 3px);
+    box-shadow: 1px 1px 0 var(--ink);
+}
+
+.gumball-knob:disabled {
+    opacity: .5;
+    cursor: wait;
+}
+
+.machine-brand {
+    margin: 13px 0 0;
+    font-family: var(--font-chaos);
+    font-size: .8rem;
+    color: var(--ink);
+}
+
+/* DISPENSER */
+
+.gumball-dispenser {
+    position: relative;
+    width: 75%;
+    height: 75px;
+    margin: -2px auto 0;
+    border: 4px solid var(--ink);
+    border-radius: 0 0 18px 18px;
+    background: linear-gradient(135deg, var(--chrome), var(--silver));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dispenser-opening {
+    position: absolute;
+    width: 65%;
+    height: 17px;
+    top: 0;
+    border: 3px solid var(--ink);
+    border-top: none;
+    border-radius: 0 0 50% 50%;
+    background: var(--silver-dark);
+}
+
+.dispensed-gumball {
+    position: relative;
+    z-index: 2;
+    width: 55px;
+    height: 55px;
+    margin-top: 22px;
+    padding: 3px;
+    border: 3px solid var(--ink);
+    border-radius: 50%;
+    background: var(--pink);
+    box-shadow: 3px 3px 0 var(--ink);
+    cursor: pointer;
+    animation: gumball-drop .55s cubic-bezier(.2,1.5,.5,1);
+}
+
+.dispensed-gumball img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.dispensed-gumball[hidden],
+.gumball-again[hidden] {
+    display: none;
+}
+
+@keyframes gumball-drop {
+    from {
+        transform: translateY(-75px) scale(.4);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+/* MACHINE SHAKE */
+
+.gumball-machine.shaking {
+    animation: machine-shake .55s ease-in-out;
+}
+
+@keyframes machine-shake {
+    0%, 100% { transform: rotate(0); }
+    20% { transform: rotate(-5deg); }
+    40% { transform: rotate(5deg); }
+    60% { transform: rotate(-3deg); }
+    80% { transform: rotate(3deg); }
+}
+
+.gumball-caption {
+    margin: 28px auto 12px;
+    color: var(--pink-dark);
+    font-family: var(--font-diary);
+    font-size: 1.4rem;
+}
+
+.gumball-again {
+    margin: 10px auto;
+}
+
+/* ARTWORK PREVIEW */
+
+.gumball-modal {
+    position: fixed;
+    width: min(90%, 420px);
+    max-height: 90vh;
+    padding: 25px;
+    border: 3px solid var(--ink);
+    background: var(--cream);
+    box-shadow: 8px 8px 0 var(--pink);
+    text-align: center;
+}
+
+.gumball-modal::backdrop {
+    background: rgba(25,19,30,.7);
+    backdrop-filter: blur(4px);
+}
+
+.gumball-modal > img {
+    display: block;
+    width: 100%;
+    max-height: 55vh;
+    object-fit: contain;
+    border: 2px solid var(--ink);
+    background: white;
+}
+
+.modal-close {
+    display: block;
+    margin: 0 0 12px auto;
+    border: 2px solid var(--ink);
+    background: var(--pink);
+    padding: 6px 12px;
+    font-family: var(--font-tech);
+    cursor: pointer;
+}
+
+.modal-artwork-info h2 {
+    font-family: var(--font-chaos);
+    font-size: 1.8rem;
+    margin: 12px 0;
+}
+
+.modal-artwork-info p:last-child {
+    font-family: var(--font-diary);
+    font-size: 1.15rem;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 450px) {
+    .gumball-section {
+        padding: 55px 5%;
+    }
+
+    .gumball-machine {
+        width: min(100%, 300px);
+    }
+
+    .gumball-ball {
+        width: 12%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .gumball-ball,
+    .gumball-machine.shaking,
+    .dispensed-gumball {
+        animation: none !important;
+    }
+}
