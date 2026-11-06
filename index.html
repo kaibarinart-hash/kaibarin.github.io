@@ -35,29 +35,92 @@
             <a class="button" href="gallery.html"> See My Work </a>
         </section>
 
-        <section class="featured">
-            <div class="section-heading">
-                <p class="eyebrow">a little peek</p>
-                <h2>Featured artwork</h2>
-                <p>A few of my favorite creations.</p>
+<section class="gumball-section">
+    <div class="section-heading">
+        <p class="eyebrow">a little surprise for you</p>
+        <h2>Art Gumball Machine!</h2>
+        <p>Take a chance and see what comes out ♡</p>
+    </div>
+
+    <div class="gumball-machine" id="gumball-machine">
+
+        <div class="machine-label">
+            <span>KAIBARIN'S</span>
+            <strong>ART-O-MATIC</strong>
+            <span>100% ORIGINAL CREATIONS</span>
+        </div>
+
+        <div class="machine-dome">
+            <div class="gumball-balls" id="gumball-balls">
+                <p class="gumball-loading">Loading little treasures...</p>
             </div>
+            <div class="dome-shine"></div>
+        </div>
 
-            <div class="art-grid">
-                <article class="art-card">
-                    <img src="images/art1.png" alt="Featured illustration one">
-                    <h3>Artwork title one</h3>
-                </article>
+        <div class="machine-neck"></div>
 
-                <article class="art-card">
-                    <img src="images/art2.png" alt="Featured illustration two">
-                    <h3>Artwork title two</h3>
-                </article>
+        <div class="machine-base">
+            <p class="machine-instruction">INSERT IMAGINARY COIN</p>
 
-                <article class="art-card">
-                    <img src="images/art3.png" alt="Featured illustration three">
-                    <h3>Artwork title three</h3>
-                </article>
-            </div>
+            <button
+                class="gumball-knob"
+                id="gumball-knob"
+                type="button"
+                aria-label="Dispense a random artwork"
+            >
+                <span>✦</span>
+            </button>
+
+            <p class="machine-brand">KAIBARIN ©</p>
+        </div>
+
+        <div class="gumball-dispenser">
+            <div class="dispenser-opening"></div>
+
+            <button
+                class="dispensed-gumball"
+                id="dispensed-gumball"
+                type="button"
+                hidden
+                aria-label="View your dispensed artwork"
+            >
+                <img id="dispensed-image" src="" alt="">
+            </button>
+        </div>
+    </div>
+
+    <p class="gumball-caption" id="gumball-caption">
+        Turn the knob and get a surprise!
+    </p>
+
+    <button
+        class="button gumball-again"
+        id="gumball-again"
+        type="button"
+        hidden
+    >
+        Try Again ♡
+    </button>
+</section>
+
+<dialog class="gumball-modal" id="gumball-modal">
+    <button
+        class="modal-close"
+        id="gumball-modal-close"
+        type="button"
+        aria-label="Close artwork preview"
+    >
+        ✕
+    </button>
+
+    <img id="modal-artwork-image" src="" alt="">
+
+    <div class="modal-artwork-info">
+        <p class="eyebrow">YOU GOT A SURPRISE!</p>
+        <h2 id="modal-artwork-title"></h2>
+        <p id="modal-artwork-description"></p>
+    </div>
+</dialog>
 
             <a class="text-link" href="gallery.html">See the full gallery →</a>
         </section>
