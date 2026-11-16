@@ -82,17 +82,12 @@ if (
 
 
 /* =========================================
-   KAIBARIN — ART GUMBALL MACHINE
+   KAIBARIN — GUMBALL MACHINE
 ========================================= */
 
 // Your artwork collection!
 // These paths match the files in your GitHub images folder.
 const gachaArtworks = [
-    {
-        title: "Reese",
-        image: "images/Reese.png",
-        description: "Reese (by @erospistol)"
-    },
     {
         title: "Marquis",
         image: "images/Marquis.png",
